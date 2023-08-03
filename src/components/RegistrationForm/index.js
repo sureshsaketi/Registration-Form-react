@@ -14,12 +14,16 @@ class RegistrationForm extends Component {
   onBlurFirstName = event => {
     if (event.target.value === '') {
       this.setState({showFirstNameError: true})
+    } else {
+      this.setState({showFirstNameError: false})
     }
   }
 
   onBlurLastName = event => {
     if (event.target.value === '') {
       this.setState({showLastNameError: true})
+    } else {
+      this.setState({showLastNameError: false})
     }
   }
 
@@ -58,7 +62,7 @@ class RegistrationForm extends Component {
 
     return (
       <>
-        <label className="name-label" htmlFor="firstName">
+        <label className="name-label" htmlFor="lastName">
           LAST NAME
         </label>
         <input
